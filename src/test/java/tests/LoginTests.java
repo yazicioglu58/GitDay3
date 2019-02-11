@@ -34,4 +34,9 @@ public class LoginTests {
         Assert.assertEquals(driver.getTitle(), "Web Orders");
     }
 
+    @Test
+    public void cleanUp(){
+        driver.close();
+
+    }
 }
