@@ -15,7 +15,8 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
+//adding loingtest and modifiying the code
+//without commiting
 public class LoginTests {
 
     WebDriver driver;
@@ -35,7 +36,18 @@ public class LoginTests {
         driver.findElement(By.id("ctl00_MainContent_password")).sendKeys("test"+ Keys.ENTER);
         Assert.assertEquals(driver.getTitle(), "Web Orders");
     }
+    @Test
+    public void LogOutTest(){
+        driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
+        driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester");
+        driver.findElement(By.id("ctl00_MainContent_password")).sendKeys("test"+ Keys.ENTER);
+        driver.findElement(By.id("ct100_logout")).click();
+        Assert.assertEquals(driver.getTitle(), "Web Orders Login");
 
+    }
+
+
+<<<<<<< HEAD
     @Test
     public void logOutTest(){
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
@@ -75,5 +87,11 @@ public class LoginTests {
     @AfterMethod
     public void cleanUp(){
     driver.close();
+=======
+    @AfterMethod
+    public void cleanUp(){
+        driver.close();
+
+>>>>>>> feature
     }
 }
