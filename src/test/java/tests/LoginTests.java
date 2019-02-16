@@ -47,7 +47,7 @@ public class LoginTests {
     }
 
 
-<<<<<<< HEAD
+
     @Test
     public void logOutTest(){
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
